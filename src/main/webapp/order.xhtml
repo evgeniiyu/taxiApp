@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+        >
+<h:head></h:head>
+<h:body>
+    <h:form id="indexId">
+        <h:outputLabel for="#{createOrderBean.status}" value="Status:"/>
+        <p:inputText id="inputTextID" value="#{createDriverBean.status}">
+        </p:inputText>
+        <br/>
+        <h:outputLabel for="#{createOrderBean.driver.lastName}" value="Last name:"/>
+        <p:inputText value="#{createOrderBean.driver.lastName}"/>
+        <br/>
+        <br/>
+        <p:commandButton type="submit" value="Add" action="#{createDriverBean.create}" update="indexId"/>
+    </h:form>
+</h:body>
+</html>
